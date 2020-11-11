@@ -10,7 +10,6 @@ import com.badlogic.gdx.math.Rectangle;
 public class SpaceShip extends Rectangle {
     private final Texture ship;
 
-
     public SpaceShip() {
         ship = new Texture("fighter.png");
         width = (int) Math.round(ship.getWidth() * 1.5);
@@ -29,6 +28,10 @@ public class SpaceShip extends Rectangle {
 
     public void dispose(){
 
+    }
+
+    public Laser shoot() {
+        return new Laser(x + width, y + (height / 2));
     }
 
 }
